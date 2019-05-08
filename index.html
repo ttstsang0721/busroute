@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title data-template="config:app-title">BUS ROUTE INFORMATION PAGE</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta data-template="config:app-meta"/>
-        <link rel="shortcut icon" href="$shared/resources/images/exist_icon_16x16.ico"/>
-        <link rel="stylesheet" type="text/css" href="$shared/resources/css/bootstrap-3.0.3.min.css"/>
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
-        <script type="text/javascript" src="$shared/resources/scripts/jquery/jquery-1.7.1.min.js"/>
-        <script type="text/javascript" src="$shared/resources/scripts/loadsource.js"/>
-        <script type="text/javascript" src="$shared/resources/scripts/bootstrap-3.0.3.min.js"/>
-    </head>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title data-template="config:app-title">BUS ROUTE INFORMATION PAGE</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta data-template="config:app-meta"/>
+            <link rel="shortcut icon" href="$shared/resources/images/exist_icon_16x16.ico"/>
+            <link rel="stylesheet" type="text/css" href="$shared/resources/css/bootstrap-3.0.3.min.css"/>
+            <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+            <script type="text/javascript" src="$shared/resources/scripts/jquery/jquery-1.7.1.min.js"/>
+            <script type="text/javascript" src="$shared/resources/scripts/loadsource.js"/>
+            <script type="text/javascript" src="$shared/resources/scripts/bootstrap-3.0.3.min.js"/>
+        </head>
     <div class="row">
         <div class="col-md-8">	
             <div class="page-header">
@@ -33,54 +33,56 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h2>Application Info</h2>
             <div data-template="config:app-info"/>
-    <h1>BUS ROUTE INFORMATION PAGE</h1>
-    <p>Please input data in the form below to search for bus routes information in Hong Kong. </p>
-    <p>(All fields are case insensitive.)</p>
-
-    <form method="get" action="search.xq"> 
-        <label>Bus Route Number (starts with): </label>
-        <input type="text" name="routeno"/>
-        <br/>
-        <br/>    
-        <label>Start Station (contains): </label>
-        <input type="text" name="startstation"/>
-        <br/>
-        <br/>    
-        <label>End Station (contains): </label>
-        <input type="text" name="endstation"/>
-        <br/>
-        <br/>
-        <label>Bus Operator(s): </label>
-        <select name="operator">
-            <option value="All Operators">- Select -</option>
-            <option value="KMB">KMB</option>
-            <option value="CTB">CTB</option>
-            <option value="NWFB">NWFB</option>
-            <option value="LWB">LWB</option>        
-            <option value="NLB">NLB</option>        
-            <option value="KMB+CTB">KMB+CTB</option>
-            <option value="KMB+NWFB">KMB+NWFB</option>
-            <option value="LWB+CTB">LWB+CTB</option>            
-            <option value="XB">XB</option>        
-            <option value="DB">DB</option> 
-            <option value="PI">PI</option> 
-            <option value="LRTFeeder">LRTFeeder</option> 
-            <option value="All Operators">ALL</option> 
-        </select>
-        <br/>
-        <br/> 
-        <input type="submit" name="search" value="Start Searching"/>
-        <br/>
-    </form>
-    <br/>
-    <form method="get" action="display.xq"> 
-        <br/>
-        <input type="submit" name="display" value="Display all bus route in the XML File"/>
-        <br/>        
-    </form>			
+            <h1>BUS ROUTE INFORMATION PAGE</h1>
+            <p>Please input data in the form below to search for bus routes information in Hong Kong. </p>
+            <p>(All fields are case insensitive.)</p>
+            <div>
+                <form method="get" action="search.xq"> 
+                    <label>Bus Route Number (starts with): </label>
+                    <input type="text" name="routeno"/>
+                    <br/>
+                    <br/>    
+                    <label>Start Station (contains): </label>
+                    <input type="text" name="startstation"/>
+                    <br/>
+                    <br/>    
+                    <label>End Station (contains): </label>
+                    <input type="text" name="endstation"/>
+                    <br/>
+                    <br/>
+                    <label>Bus Operator(s): </label>
+                    <select name="operator">
+                        <option value="All Operators">- Select -</option>
+                        <option value="KMB">KMB</option>
+                        <option value="CTB">CTB</option>
+                        <option value="NWFB">NWFB</option>
+                        <option value="LWB">LWB</option>        
+                        <option value="NLB">NLB</option>        
+                        <option value="KMB+CTB">KMB+CTB</option>
+                        <option value="KMB+NWFB">KMB+NWFB</option>
+                        <option value="LWB+CTB">LWB+CTB</option>            
+                        <option value="XB">XB</option>        
+                        <option value="DB">DB</option> 
+                        <option value="PI">PI</option> 
+                        <option value="LRTFeeder">LRTFeeder</option> 
+                        <option value="All Operators">ALL</option> 
+                    </select>
+                    <br/>
+                    <br/> 
+                    <input type="submit" name="search" value="Start Searching"/>
+                    <br/>
+                </form>
+            </div>
+            <div>
+                <form method="get" action="display.xq"> 
+                    <br/>
+                    <input type="submit" name="display" value="Display all bus route in the XML File"/>
+                    <br/>        
+                </form>
+            </div>
         </div>
-    </div>
-</html>
+    </div> 
+    </div>     
+    </html>
 </div>
